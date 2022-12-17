@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    background: rgba(246, 246, 246, 1);
+    color: rgba(45, 45, 45, 1);
+    font-family: 'Inter', sans-serif;
+}
+.app-wrapper{
+    padding: 5%;
+}
+li{
+    list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------- INPUTS AND BUTTONS --------- */
+.project-input{
+    background: url(images/icons/search.png) no-repeat scroll 15px 12px;
+    align-items: center;
+    background-size: 1.2em;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #FEFEFE;
+    width: 30%;
+    padding: 13px 40px;
+    display: inline-block;
+    border: 0px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.05));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.button{
+    background: url(images/icons/plus.png) no-repeat scroll 12px 15px;
+    background-size: 1.2em;
+    background-color: #FEFEFE;
+    padding-top: 5px;
+    cursor: pointer;
+    border-radius: 7px;
+    font-style: normal;
+    font-weight: 500;
+    color: rgba(45, 45, 45, 1);
+    border: none;
+    padding: 15px 15px 15px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.button:active {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .02s;
+    transform: scale(1.05);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* --------- PROJECT LISTING --------- */
+.project-container{
+    padding-top: 1%;
+    position: absolute;
+    border: solid red 3px;
+    background-color: #FEFEFE;
+    border-radius: 7px;
+    width: 50vw;
+    height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+  .table-info{
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
   }
-}
+
+  .list{
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0%;
+  }
