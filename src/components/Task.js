@@ -7,10 +7,9 @@ const Task = ({ task }) => {
   const { removeTask, findItem } = useContext(TaskListContext)
   return (
     <li className="list-item">
-      <div>
-      <span>{task.title}</span>
+      <span className="constrainSize">{task.title}</span>
 
-        <span>James Kang</span>
+        <span className="constrainSize">James Kang</span>
 
         <input type="checkbox" />
 
@@ -21,8 +20,6 @@ const Task = ({ task }) => {
         <button className="btn-delete task-btn" onClick={() => removeTask(task.id)}>
           <img src={remove} width="15" height="15" />
         </button>{''}
-        
-      </div>
     </li>
   )
 }

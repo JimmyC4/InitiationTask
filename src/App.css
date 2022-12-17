@@ -19,6 +19,7 @@ li{
     background-size: 1.2em;
     font-style: normal;
     font-weight: 500;
+    font-size: .9rem;
     background-color: #FEFEFE;
     width: 30%;
     padding: 13px 40px;
@@ -46,6 +47,7 @@ li{
     border-radius: 7px;
     font-style: normal;
     font-weight: 500;
+    font-size: .85rem;
     color: rgba(45, 45, 45, 1);
     border: none;
     padding: 15px 15px 15px 36px;
@@ -59,24 +61,47 @@ li{
   }
 /* --------- PROJECT LISTING --------- */
 .project-container{
-    padding-top: 1%;
+    margin-top: 1%;
     position: absolute;
-    border: solid red 3px;
     background-color: #FEFEFE;
     border-radius: 7px;
     width: 50vw;
+    min-width: 320px;
     height: 100vh;
   }
   .table-info{
+    padding-block: 1.5%;
+    padding-inline: 5%;
     display: flex;
     align-items: left;
     justify-content: space-between;
+    background: #F7F7F7;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
+    border-radius: 7px 7px 0px 0px;
+    font-weight: 500;
+    font-size: .85rem;
   }
 
   .list{
+    margin: 0;
     display: flex;
     align-items: left;
     justify-content: space-between;
     flex-direction: column;
-    padding: 0%;
+    padding-inline: 5%;
+    font-weight: 500;
+    font-size: .9rem;
+  }
+
+  .list-item{
+    padding-block: 1%;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .constrainSize{
+    min-width: 100px;
   }
