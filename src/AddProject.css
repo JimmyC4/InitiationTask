@@ -1,15 +1,19 @@
-.absolute-container
+.absolute-container, .absolute-container2
 {
     position: absolute;
-    top: 1.8rem;
-    right: -6.8rem;
+    top: 1.6rem;
+    right: 1.1rem;
     width: 250px;
-    padding: 1px;
+    padding-block: 17px;
     border-radius: 7px;
     background-color: #FEFEFE;
     border: 1 solid red;
     z-index: 1;
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.05));
+}
+.absolute-container2
+{
+    right: -7.7rem;
 }
 
 .absolute-container ul{
@@ -17,12 +21,14 @@
     flex-direction: column;
     align-items: baseline;
     justify-content:left;
-    gap: 10px;
-    padding-inline-start: 25px;
+    gap: 8px;
+    padding-inline-start: 30px;
 }
 .relative-container
 {
     position: relative;
+    /* position: absolute; */
+    z-index: 1;
 }
 input.project-input-dropdown{
     /* background: url(images/icons/search.png) no-repeat scroll 15px 12px; */
@@ -48,7 +54,7 @@ input.project-input-dropdown{
   
 .title{
     font-weight: 600;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 .create-task-btn{
     cursor: pointer;
@@ -69,7 +75,7 @@ input.project-input-dropdown{
     border: 0px solid #ccc;
     border-radius: 20px;
     box-sizing: border-box;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 .create-task-btn:active{
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) .02s;
