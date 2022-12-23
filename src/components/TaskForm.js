@@ -34,8 +34,7 @@ const TaskForm = () => {
   }, [editItem])
 
   return (
-    <form onSubmit={handleSubmit} className="form">
-      
+    <div className='inputs'>
       <input
         type="text"
         placeholder={"Project Name..."}
@@ -44,9 +43,6 @@ const TaskForm = () => {
         required
         className="project-input"
       />
-        {/* <button type="submit" className="button add-task-btn">
-          {editItem ? 'Edit Task' : 'Add Project'}
-        </button> */}
         <button className="button add-task-btn" onClick={()=> setOpenAddProject((prev) => !prev)}>
           Add Project
         </button>
@@ -55,13 +51,11 @@ const TaskForm = () => {
           openAddProject && <AddProject/>
         }
         
-        {/* <button className="btn clear-btn" onClick={clearList}>
-          Clear All
-        </button> */}
+
         <button className="button filter-btn" onClick="">
           Add Filter
         </button>
-    </form>
+    </div>
   )
 }
 

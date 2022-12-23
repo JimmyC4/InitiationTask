@@ -2,13 +2,12 @@
 {
     position: absolute;
     top: 1.8rem;
-    right: -6.4rem;
+    right: -6.8rem;
     width: 250px;
     padding: 1px;
     border-radius: 7px;
     background-color: #FEFEFE;
     border: 1 solid red;
-    flex-wrap: nowrap;
     z-index: 1;
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.05));
 }
@@ -29,10 +28,9 @@ input.project-input-dropdown{
     /* background: url(images/icons/search.png) no-repeat scroll 15px 12px; */
     align-items: center;
     background-size: 1.2em;
-    font-weight: 500;
+    font-weight: 400;
     font-size: .9rem;
-    color: #727272;
-    font-size: .9rem;
+    color: rgba(45, 45, 45, 1);
     background: #f0f0f0;
     width: 90%;
     min-width: 180px;
@@ -41,19 +39,26 @@ input.project-input-dropdown{
     border: 0px solid #ccc;
     border-radius: 20px;
     box-sizing: border-box;
-    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.02));
 }
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  
 .title{
+    font-weight: 600;
     padding-bottom: 5px;
 }
 .create-task-btn{
+    cursor: pointer;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
     margin: auto;
     background-size: 1.2em;
-    font-weight: 500;
+    font-weight: 400;
     font-size: .9rem;
     color: #727272;
     font-size: .9rem;
@@ -64,6 +69,14 @@ input.project-input-dropdown{
     border: 0px solid #ccc;
     border-radius: 20px;
     box-sizing: border-box;
-    margin-bottom: 7%;
-    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.02));
+    margin-top: 5%;
+}
+.create-task-btn:active{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .02s;
+    transform: scale(1.03);
+}
+
+.create-task-btn:hover{
+    background-color: rgba(10, 132, 255, 1);
+    color: white;
 }

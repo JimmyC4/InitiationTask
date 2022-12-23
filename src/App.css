@@ -43,12 +43,12 @@ strong{
   filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.05));
 }
 
-.form{
+.inputs{
   display: flex;
   align-items: center;
   justify-content: left;
   flex-direction: row;
-  gap: 2%;
+  gap: 1.5%;
 }
 
 .button{
@@ -64,10 +64,7 @@ strong{
   color: rgba(45, 45, 45, 1);
   border: none;
   padding: 15px 15px 15px 36px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
-
 }
 .button:active {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) .02s;
@@ -103,6 +100,16 @@ input[type="checkbox" i] {
   right: 35px;
   min-width: 20px;
   border: 0px solid white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input{
+  text-transform: capitalize;
+}
+input:focus{
+  outline: 2.9px solid rgba(10, 132, 255, 1);
 }
 .project-container{
   filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
