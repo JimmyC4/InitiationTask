@@ -5,13 +5,15 @@ import "../AddProject.css";
 const AddProject = () => {
     const [openAddProject, setOpenAddProject ] = useState(false);
 
-    const { addTask, clearList, editTask, editItem } = useContext(TaskListContext)
+    const { addTask, addUser, editTask, editItem } = useContext(TaskListContext)
     const [title, setTitle] = useState('')
+    const [user, setUser] = useState('')
 
     const handleSubmit = e => {
       e.preventDefault()
       if (!editItem) {
         addTask(title)
+        addUser(user)
         setTitle('')
       } else {
         editTask(title, editItem.id)
@@ -20,6 +22,9 @@ const AddProject = () => {
 
     const handleChange = e => {
       setTitle(e.target.value)
+    }
+    const handleUserChange = e => {
+      setUser(e.target.value)
     }
 
     useEffect(() => {
@@ -51,8 +56,8 @@ const AddProject = () => {
               <input
                 type="text"
                 placeholder={"User..."}
-                // value={title}
-                // onChange={handleChange}
+                value={user}
+                onChange={handleUserChange}
                 required
                 className="project-input-dropdown faded"
               />

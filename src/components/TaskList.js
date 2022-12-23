@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { TaskListContext } from "../contexts/TaskListContext";
 import Task from "./Task";
+import chilling from '../images/icons/chilling.png';
 
 const TaskList = () => {
   const { tasks } = useContext(TaskListContext);
@@ -21,7 +22,10 @@ const TaskList = () => {
             })}
           </ul>
         ) : (
-          <div className="no-tasks">No Tasks</div>
+          <div className="no-tasks">
+            <img src={chilling} width="33%" height="33%" />
+            <div>No projects yet! Create one above.</div>
+          </div>
         )}
       </div>
     </div>

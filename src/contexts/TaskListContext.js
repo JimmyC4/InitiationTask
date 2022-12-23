@@ -7,6 +7,7 @@ const TaskListContextProvider = props => {
   const initialState = JSON.parse(localStorage.getItem('tasks')) || []
 
   const [tasks, setTasks] = useState(initialState)
+  const [users, setUsers] = useState(initialState)
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
@@ -55,7 +56,7 @@ const TaskListContextProvider = props => {
         clearList,
         findItem,
         editTask,
-        editItem
+        editItem,
       }}
     >
       {props.children}

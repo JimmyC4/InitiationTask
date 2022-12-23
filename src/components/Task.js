@@ -9,18 +9,21 @@ const Task = ({ task }) => {
     <li className="list-item">
       <span className="taskTitle">{task.title}</span>
 
-        <span className="userName">James Kang</span>
+        <span className="userName">{task.user}</span>
 
-        <input type="checkbox" className="checkbox constrainSize"/>
-        <div className="actions constrainSize">
-          <button className="btn-edit action-btn" onClick={() => findItem(task.id)}>
-            <img src={edit} width="15" height="15" />
-          </button>
+        <span><input type="checkbox" className="checkbox"/></span>
+        
+        <span>
+          <div className="actions">
+            <button className="btn-edit action-btn" onClick={() => findItem(task.id)}>
+              <img src={edit} width="15" height="15" />
+            </button>
 
-          <button className="btn-delete action-btn" onClick={() => removeTask(task.id)}>
-            <img src={remove} width="15" height="15" />
+            <button className="btn-delete action-btn" onClick={() => removeTask(task.id)}>
+              <img src={remove} width="15" height="15" />
           </button>{''}
-        </div>
+          </div>
+        </span>
         
     </li>
   )
