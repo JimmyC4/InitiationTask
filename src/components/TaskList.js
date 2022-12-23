@@ -9,10 +9,10 @@ const TaskList = () => {
     <div>
       <div className="project-container">
         <div className="table-info">
-            <span>Project</span>
-            <span>User</span>
-            <span>Completion</span>
-            <span>Actions</span>
+            <span className="constrainSize">Project</span>
+            <span className="constrainSize">User</span>
+            <span className="constrainSize">Completion</span>
+            <span className="constrainSize">Actions</span>
           </div>
         {tasks.length ? (
           <ul className="list">
