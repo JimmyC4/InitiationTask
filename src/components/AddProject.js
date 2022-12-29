@@ -17,6 +17,7 @@ const AddProject = () => {
         setTitle('')
       } else {
         editTask(title, editItem.id)
+        editTask(user, editItem.id)
       }
     }
 
@@ -30,9 +31,11 @@ const AddProject = () => {
     useEffect(() => {
       if (editItem) {
         setTitle(editItem.title)
+        setUser(editItem.user)
         console.log(editItem)
       } else {
         setTitle('')
+        setUser('')
       }
     }, [editItem])
 
