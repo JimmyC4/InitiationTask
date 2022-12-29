@@ -5,19 +5,21 @@ import "../AddProject.css";
 const AddProject = () => {
     const [openAddProject, setOpenAddProject ] = useState(false);
 
-    const { addTask, addUser, editTask, editItem } = useContext(TaskListContext)
+    const { addTask, editTask, editItem } = useContext(TaskListContext)
     const [title, setTitle] = useState('')
-    const [user, setUser] = useState('')
+    const [user, setUser] = useState('')  
 
     const handleSubmit = e => {
       e.preventDefault()
+
       if (!editItem) {
-        addTask(title)
-        addUser(user)
+        addTask(title, user)
         setTitle('')
+        setUser('')
+        console.log(title)
+        console.log(user)
       } else {
-        editTask(title, editItem.id)
-        editTask(user, editItem.id)
+        editTask(title, user, editItem.id)
       }
     }
 
@@ -43,7 +45,7 @@ const AddProject = () => {
     <div className='relative-container'>
       <div className='absolute-container'>
         <ul>
-            <li className='title'>New Project:</li>
+            <li className='title'>{editItem ? 'Edit Project:' : 'New Project:'}</li>
 
             <form onSubmit={handleSubmit} className="form">
 
@@ -67,7 +69,7 @@ const AddProject = () => {
 
               {/* --------- CREATE PROJECT / EDIT PROJECT BUTTON --------- */}
               <button type="submit" className="create-task-btn">
-                {editItem ? 'Edit Project' : 'Create'}
+                {editItem ? 'Save' : 'Create'}
               </button>
             </form>
             

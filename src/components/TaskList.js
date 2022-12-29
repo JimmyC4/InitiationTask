@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { TaskListContext } from "../contexts/TaskListContext";
 import Task from "./Task";
 import chilling from '../images/icons/chilling.png';
+import { TaskForm } from "./TaskForm";
 
 const TaskList = () => {
   const { tasks } = useContext(TaskListContext);
+  const { search } = useContext(TaskForm);
 
   return (
     <div>
@@ -17,7 +19,9 @@ const TaskList = () => {
           </div>
         {tasks.length ? (
           <ul className="list">
-            {tasks.map(task => {
+            {tasks.filter((tasks) => {
+              return search.toLowerCase() === '' ? tasks : tasks.title.toLowerCase().includes(search);
+            }).map(task => {
               return <Task task={task} key={task.id} />;
             })}
           </ul>
@@ -32,4 +36,4 @@ const TaskList = () => {
   );
 };
 
-export default TaskList;
+export default TaskList

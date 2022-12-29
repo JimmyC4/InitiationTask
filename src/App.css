@@ -53,8 +53,8 @@ strong{
   font-weight: 500;
   font-size: .9rem;
   background-color: #FEFEFE;
-  width: 30%;
-  min-width: 180px;
+  width: 40%;
+  min-width: 188px;
   padding: 12px 41px;
   display: inline-block;
   border: 0px solid #ccc;
@@ -94,6 +94,7 @@ strong{
 /* --------- PROJECT LISTING --------- */
 .no-tasks{
   padding-top: 16%;
+  padding-bottom: 16%;
   gap: 2.5rem;
   display: flex;
   align-items: center;
@@ -101,12 +102,15 @@ strong{
   flex-direction: column;
 }
 .taskTitle{
-  text-transform: capitalize;
   padding: 0;
   margin: 0;
   max-width: 100px;
 }
+.taskTitle::first-letter{
+  text-transform: capitalize;
+}
 .userName{
+  text-transform: capitalize;
   color: rgba(114, 114, 114, 1);
 }
 .actions{
@@ -152,7 +156,8 @@ input:focus{
   border-radius: 7px;
   width: 50vw;
   min-width: 435px;
-  height: 80vh;
+  height: auto;
+  margin-bottom: 8%;
   }
 .table-info{
   padding-block: 1.5%;
