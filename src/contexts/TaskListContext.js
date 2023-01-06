@@ -7,6 +7,7 @@ const TaskListContextProvider = props => {
   const initialState = JSON.parse(localStorage.getItem('tasks')) || []
 
   const [tasks, setTasks] = useState(initialState)
+  const [ search ] = 'test'
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
@@ -23,11 +24,6 @@ const TaskListContextProvider = props => {
   const removeTask = id => {
     setTasks(tasks.filter(task => task.id !== id))
   }
-
-  // Clear tasks
-  // const clearList = () => {
-  //   setTasks([])
-  // }
 
   // Find task
   const findItem = id => {
@@ -50,6 +46,7 @@ const TaskListContextProvider = props => {
     <TaskListContext.Provider
       value={{
         tasks,
+        search,
         addTask,
         removeTask,
         findItem,

@@ -5,7 +5,6 @@ import "../AddProject.css";
 const Filter = () => {
   const [openFilter, setOpenFilter ] = useState(false);
   
-
   return (
     <div className='relative-container'>
       <div className='absolute-container absolute-container2'>
