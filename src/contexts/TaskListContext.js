@@ -8,6 +8,7 @@ const TaskListContextProvider = props => {
 
   const [tasks, setTasks] = useState(initialState)
   const [ search ] = ' '
+  console.log(search);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))

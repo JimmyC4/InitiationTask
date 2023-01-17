@@ -10,8 +10,9 @@ const App = () => {
     <TaskListContextProvider>
       <div className="container">
         <div className="app-wrapper">
-            <TaskForm/>
-            <TaskList />
+            <TaskForm>
+              <TaskList />
+            </TaskForm>
         </div>
       </div>
     </TaskListContextProvider>

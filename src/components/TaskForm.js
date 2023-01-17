@@ -7,7 +7,7 @@ const TaskForm = () => {
   const [openFilter, setOpenFilter ] = useState(false);
 
   const [search, setSearch] = useState('');
-  console.log(search);
+  // console.log(search);
 
   return (
     <div className='inputs'>
