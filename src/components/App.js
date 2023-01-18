@@ -1,18 +1,16 @@
 import React from "react";
-import TaskListContextProvider from "../contexts/TaskListContext";
-import TaskList from "./TaskList";
-import TaskForm from "./TaskForm";
-
 import "../App.css";
+import TaskListContextProvider from "../contexts/TaskListContext";
+import SearchBar from "./SearchBar";
+// import TaskForm from "./TaskForm";
+// import TaskList from "./TaskList";
 
 const App = () => {
   return (
     <TaskListContextProvider>
       <div className="container">
         <div className="app-wrapper">
-            <TaskForm>
-              <TaskList />
-            </TaskForm>
+            <SearchBar />
         </div>
       </div>
     </TaskListContextProvider>

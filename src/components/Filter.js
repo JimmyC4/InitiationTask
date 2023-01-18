@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { TaskListContext } from '../contexts/TaskListContext'
-import "../AddProject.css";
 
 const Filter = () => {
   const [openFilter, setOpenFilter ] = useState(false);

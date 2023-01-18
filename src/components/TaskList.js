@@ -1,10 +1,14 @@
 import React, { useContext, useState } from "react";
 import { TaskListContext } from "../contexts/TaskListContext";
+
 import Task from "./Task";
 import chilling from '../images/icons/chilling.png';
 
-const TaskList = () => {
-  const { tasks, search } = useContext(TaskListContext);
+const TaskList = (props) => {
+  const { tasks } = useContext(TaskListContext);
+  // let { search } = props.searchValue;
+  const [ search ] = ' '; // Shows some of the code with this 
+  
 
   return (
     <div>

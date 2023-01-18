@@ -6,19 +6,19 @@ const TaskForm = () => {
   const [openAddProject, setOpenAddProject ] = useState(false);
   const [openFilter, setOpenFilter ] = useState(false);
 
-  const [search, setSearch] = useState('');
+  // const [search, setSearch] = useState('');
   // console.log(search);
 
   return (
     <div className='inputs'>
-      <input
+      {/* <input
         type="text"
         placeholder={"Search Project..."}
         // value={}
         onChange={(e) => setSearch(e.target.value)}
         required
         className="project-input"
-      />
+      /> */}
 
         <button className="button add-task-btn" onClick={()=> setOpenAddProject((prev) => !prev)}>
           Add Project
